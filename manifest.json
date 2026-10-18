@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "hCaptcha Fast Pass",
+  "version": "1.0.0",
+  "description": "Clean, lightweight hCaptcha checkbox auto-clicker with human emulation jitter",
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.hcaptcha.com/*",
+        "*://hcaptcha.com/*",
+        "*://newassets.hcaptcha.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
